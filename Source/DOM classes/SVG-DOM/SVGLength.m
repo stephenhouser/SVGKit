@@ -193,12 +193,13 @@ static float cachedDevicePixelsPerInch;
        || [platform hasPrefix:@"iPad5,3"]
        || [platform hasPrefix:@"iPad5,4"]
        || [platform hasPrefix:@"iPad6"]
-       || [platform hasPrefix:@"iPad7"])
+       || [platform hasPrefix:@"iPad7"]
+       || [platform hasPrefix:@"iPad8"])
         return 264.0f;
 
     if( [platform hasPrefix:@"iPad"]) // catch-all for higher-end devices not yet existing
     {
-        NSAssert(FALSE, @"Update your source code or disable assertions: you are using an iPad that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
+        //NSAssert(FALSE, @"Update your source code or disable assertions: you are using an iPad that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
         return 264.0f;
     }
 
